@@ -22,7 +22,7 @@ Python (Google Colab), pandas, matplotlib, seaborn, scikit-learn.
 
 2. **Core Metrics**
 - **Claim frequency by incident type** - multi-vehicle collisions (419) and single-vehicle collisions (403) dominate; vehicle theft and parked-car claims are far less common.
-- **Average claim amount by severity** - scales are expected: Major Damage ~$64 and Total Loss ~$62k claims are roughly 12x larger than Trivial Damage claims (~$5.3K), which is a useful sanity check that the data behaves logically.
+- **Average claim amount by severity** - scales are expected: Major Damage ~$64 and Total Loss ~$62k claims are roughly 12x larger than Trivial Damage claims ~$5.3K, which is a useful sanity check that the data behaves logically.
 - **Loss ratio by state** - computed as total claims paid ÷ total premiums collected. Came out to ~42x across all three states (IL, IN, OH). This number is **not a realistic book-of-business loss ratio** - it's inflated because the dataset only contains claiming policies. Flagged explicitly rather than reported at face value.
 
 ## Cleaned data preview: ##
