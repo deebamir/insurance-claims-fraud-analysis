@@ -22,25 +22,25 @@ Python (Google Colab), pandas, matplotlib, seaborn, scikit-learn.
 
 2. **Core Metrics**
 - **Claim frequency by incident type** - multi-vehicle collisions (419) and single-vehicle collisions (403) dominate; vehicle theft and parked-car claims are far less common.
-- **Average claim amount by severity** - scales are expected: Major Damage (~$64K) and Total Loss (~$62K) claims are roughly 12x larger than Trivial Damage claims (~$5.3K), which is a useful sanity check that the data behaves logically.
+- **Average claim amount by severity** - scales are expected: Major Damage (~$64) and Total Loss (~$62k) claims are roughly 12x larger than Trivial Damage claims (~$5.3K), which is a useful sanity check that the data behaves logically.
 - **Loss ratio by state** - computed as total claims paid ÷ total premiums collected. Came out to ~42x across all three states (IL, IN, OH). This number is **not a realistic book-of-business loss ratio** - it's inflated because the dataset only contains claiming policies. Flagged explicitly rather than reported at face value.
 
 ## Cleaned data preview: ##
 
-![Cleaned data preview](image/data_head_after_clening.png)
+![Cleaned data preview](data_head_after_cleaning.png)
 
 3. ## Visualizations ##
 - **Bar chart - claim frequency by incident type**
 
-![Claim frequency by incident type](images/claim_frequency_by_type.png)
+![Claim frequency by incident type](claim_frequency_by_type.png)
 
 - **Bar chart - average claim amount by incident severity**
 
-![Average claim amount by severity](images/avg_claim_by_severity.png)
+![Average claim amount by severity](avg_claim_by_severity.png)
 
 - **Histogram + KDE** - distribution of total claim amounts. Notably **bimodal**: one cluster of low-value claims near $0-10k, and a separate, larger cluster peaking around $60-65k. This suggests two distinct populations of claims (e.g. minor/partial claims vs. full vehicle-loss claims) rather than one continuous distribution.
 
-![Distribution of total claim amounts](images/claim_amount_distribution.png)
+![Distribution of total claim amounts](claim_amount_distribution.png)
 
 4. ## Predictive Model - Logistic Regression (Fraud Flagging) ##
 - Target: `fraud_reported`(Y/N), with a class of split of 753 non fraud/247 fraud (~25% fraud rate - notably higher than real-world fraud rates, another sign this is a curated sample).
@@ -61,11 +61,11 @@ Python (Google Colab), pandas, matplotlib, seaborn, scikit-learn.
 
 ## Before scaling: ##
 
-![Model results before scaling](images/model_before_Scaling.png)
+![Model results before scaling](model_before_Scaling.png)
 
 ## After scaling: ##
 
-![Model results after scaling](images/model_after_scaling.png)
+![Model results after scaling](model_after_scaling.png)
 
 **With more time**, addressing the class imbalance directly (`class_weight='balanced'`, SMOTE oversampling, or a tree-based model like Random Forest/XGBoost) would likely improve fraud recall further. This was intentionally kept to a simple, well-understood baseline to demonstrate the full pipeline rather than chase maximum performance.
 
