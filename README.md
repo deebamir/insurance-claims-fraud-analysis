@@ -1,5 +1,5 @@
 ## Auto Insurance Claims Analysis ##
-A Python-based exploratory data analysis and fraud-risk modeling project, built as a data analyst portfolio piece. this project ties together data cleaning, exploratory analysis, and a first-pass predictive model, with an emphasis on the kind of scrutiny an actuarial/financial-reconciliation background brings to messy real world data.
+A Python-based exploratory data analysis and fraud-risk modeling project, built as a finance and data portfolio piece. It ties together data cleaning, exploratory analysis and a first-pass predictive model, with an emphasis on the scrutiny that financial reconciliation work brings to messy real-world data: checking whether the numbers make sense before trusting them.
 
 ## Business Questions ##
 1. How frequently do claims occur, broken down by incident type?
@@ -91,5 +91,5 @@ Python (Google Colab), pandas, matplotlib, seaborn, scikit-learn.
 
 ## Files in this Repository ##
 - `insurance_claims_analysis.ipynb` - full Colab notebook (cleaning → EDA → visualizations → model)
-- `images`/ - screenshots referenced throughout this README
+- `.png` files in the repo root - screenshots referenced throughout this README
 - Source dataset: linked above, not included  in this repo (see Dataset section)
